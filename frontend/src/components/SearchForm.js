@@ -15,42 +15,70 @@ export default function SearchForm({ onSearch }) {
   };
 
   const clear = () => {
-    setBudget(''); setDiet(''); setIngredients('');
+    setBudget(''); 
+    setDiet(''); 
+    setIngredients('');
     onSearch({});
   };
 
   return (
-    <form onSubmit={submit}>
-      <div className="mb-2">
-        <label className="form-label">Budget</label>
-        <select className="form-select" value={budget} onChange={e=>setBudget(e.target.value)}>
-          <option value="">Any</option>
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-      </div>
+    <div className="search-form-container">
+      <form onSubmit={submit}>
+        <div className="form-group">
+          <label className="form-label">
+            <span className="label-icon">💰</span> Budget
+          </label>
+          <select 
+            className="form-select" 
+            value={budget} 
+            onChange={e => setBudget(e.target.value)}
+          >
+            <option value="">Any Budget</option>
+            <option value="low">Low Budget</option>
+            <option value="medium">Medium Budget</option>
+            <option value="high">High Budget</option>
+          </select>
+        </div>
 
-      <div className="mb-2">
-        <label className="form-label">Diet</label>
-        <select className="form-select" value={diet} onChange={e=>setDiet(e.target.value)}>
-          <option value="">Any</option>
-          <option value="vegetarian">Vegetarian</option>
-          <option value="vegan">Vegan</option>
-          <option value="keto">Keto</option>
-          <option value="balanced">Balanced</option>
-        </select>
-      </div>
+        <div className="form-group">
+          <label className="form-label">
+            <span className="label-icon">🥗</span> Diet Type
+          </label>
+          <select 
+            className="form-select" 
+            value={diet} 
+            onChange={e => setDiet(e.target.value)}
+          >
+            <option value="">Any Diet</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="keto">Keto</option>
+            <option value="balanced">Balanced</option>
+          </select>
+        </div>
 
-      <div className="mb-2">
-        <label className="form-label">Ingredients (comma separated)</label>
-        <input className="form-control" placeholder="e.g. egg, tomato, rice" value={ingredients} onChange={e=>setIngredients(e.target.value)} />
-      </div>
+        <div className="form-group">
+          <label className="form-label">
+            <span className="label-icon">🥘</span> Ingredients
+          </label>
+          <input 
+            className="form-control" 
+            placeholder="e.g. egg, tomato, rice" 
+            value={ingredients} 
+            onChange={e => setIngredients(e.target.value)}
+          />
+          <small className="form-text text-muted">Separate ingredients with commas</small>
+        </div>
 
-      <div className="d-flex gap-2">
-        <button className="btn btn-primary" type="submit">Search</button>
-        <button className="btn btn-outline-secondary" type="button" onClick={clear}>Clear</button>
-      </div>
-    </form>
+        <div className="form-actions">
+          <button className="btn btn-primary" type="submit">
+            <span className="btn-icon">🔍</span> Search Meals
+          </button>
+          <button className="btn btn-outline-secondary" type="button" onClick={clear}>
+            <span className="btn-icon">↺</span> Clear Filters
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }

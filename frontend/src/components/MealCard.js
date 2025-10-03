@@ -1,19 +1,56 @@
 import React from 'react';
 
 export default function MealCard({ meal }) {
+  // Map budget values to appropriate colors
+  const getBudgetColor = (budget) => {
+    switch(budget.toLowerCase()) {
+      case 'low': return 'bg-success';
+      case 'medium': return 'bg-warning';
+      case 'high': return 'bg-danger';
+      default: return 'bg-secondary';
+    }
+  };
+
   return (
-    <div className="card p-3">
-      <div className="d-flex justify-content-between align-items-start">
-        <div>
-          <h6 className="mb-1">{meal.title}</h6>
-          <div className="small text-muted">{meal.diets.join(' • ')} • {meal.time_minutes} min</div>
-          <p className="mt-2 mb-1">{meal.notes}</p>
-          <div className="small"><strong>Ingredients:</strong> {meal.ingredients.join(', ')}</div>
+    <div className="meal-card">
+      <div className="meal-card-header">
+        <div className="meal-title">
+          <h5>{meal.title}</h5>
+          <div className="meal-meta">
+            <span className="diet-tags">{meal.diets.join(' • ')}</span>
+            <span className="time">⏱️ {meal.time_minutes} min</span>
+          </div>
         </div>
-        <div className="text-end">
-          <span className="badge bg-secondary mb-2">{meal.budget}</span>
-          <div className="small">Serves: {meal.servings}</div>
+        <div className="meal-badges">
+          <span className={`badge ${getBudgetColor(meal.budget)}`}>
+            {meal.budget} budget
+          </span>
+          <div className="servings">👥 Serves {meal.servings}</div>
         </div>
+      </div>
+      
+      <div className="meal-body">
+        <p className="meal-description">{meal.notes}</p>
+        
+        <div className="ingredients-section">
+          <h6>Ingredients</h6>
+          <div className="ingredients-list">
+            {meal.ingredients.map((ingredient, index) => (
+              <span key={index} className="ingredient-tag">
+                {ingredient}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      <div className="meal-footer">
+        <button className="btn btn-outline-primary btn-sm">
+          View Recipe
+        </button>
+        <button className="btn btn-outline-secondary btn-sm">
+          Save
+        </button>
       </div>
     </div>
   );

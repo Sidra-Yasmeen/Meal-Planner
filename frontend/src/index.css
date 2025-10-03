@@ -1,0 +1,193 @@
+/* App.css */
+
+:root {
+  --marian-blue: #3d3b8eff;
+  --glaucous: #6883baff;
+  --seasalt: #f9f9f9ff;
+  --thulian-pink: #e072a4ff;
+  --celadon: #b0e298ff;
+}
+
+body {
+  background-color: var(--seasalt);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(135deg, var(--marian-blue), var(--glaucous));
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.2rem 0;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+}
+
+.navbar-text {
+  color: rgba(255,255,255,0.85) !important;
+  font-size: 0.95rem;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.search-card {
+  border-left: 4px solid var(--marian-blue);
+}
+
+.tips-card {
+  background: linear-gradient(135deg, rgba(176,226,152,0.15), rgba(104,131,186,0.1));
+  border-left: 4px solid var(--celadon);
+}
+
+.results-card {
+  border-left: 4px solid var(--thulian-pink);
+}
+
+/* Section Titles */
+h5, h6 {
+  color: var(--marian-blue);
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h5:after, h6:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--thulian-pink);
+  border-radius: 2px;
+}
+
+/* Meal Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Loading State */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(61,59,142,0.2);
+  border-radius: 50%;
+  border-top-color: var(--marian-blue);
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error State */
+.error-message {
+  background-color: rgba(224,114,164,0.1);
+  border-left: 4px solid var(--thulian-pink);
+  color: #721c24;
+  padding: 12px 15px;
+  border-radius: 4px;
+}
+
+/* Empty State */
+.empty-state {
+  color: var(--glaucous);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Tips List */
+.tips-list {
+  padding-left: 1.2rem;
+}
+
+.tips-list li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.tips-list li:before {
+  content: '•';
+  color: var(--celadon);
+  font-weight: bold;
+  position: absolute;
+  left: -1rem;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, var(--marian-blue), var(--glaucous));
+  color: white;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--marian-blue);
+  border-color: var(--marian-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--glaucous);
+  border-color: var(--glaucous);
+}
+
+.btn-outline-primary {
+  color: var(--marian-blue);
+  border-color: var(--marian-blue);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--marian-blue);
+  color: white;
+}
+
+/* Form Elements */
+.form-control:focus {
+  border-color: var(--glaucous);
+  box-shadow: 0 0 0 0.25rem rgba(104,131,186,0.25);
+}
+
+.form-select:focus {
+  border-color: var(--glaucous);
+  box-shadow: 0 0 0 0.25rem rgba(104,131,186,0.25);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-text {
+    font-size: 0.85rem;
+  }
+}

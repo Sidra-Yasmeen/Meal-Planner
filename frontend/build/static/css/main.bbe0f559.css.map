@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.bbe0f559.css","mappings":"AAAA,KAAO,kBAAkB,CAAE,YAAc,CACzC,WAAsF,aAAQ,CAAjF,YAAY,CAA6D,QAAQ,CAAnE,wDAAqE","sources":["index.css"],"sourcesContent":["body { background:#f8fafc; padding:20px; }\n.card-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:16px; }\n"],"names":[],"sourceRoot":""}

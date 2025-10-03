@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "title": "Vegetable Stir-Fry with Rice",
+    "budget": "low",
+    "diets": [
+      "vegetarian",
+      "vegan",
+      "balanced"
+    ],
+    "ingredients": [
+      "rice",
+      "broccoli",
+      "carrot",
+      "soy sauce",
+      "garlic",
+      "onion"
+    ],
+    "time_minutes": 25,
+    "servings": 2,
+    "instructions": "Stir-fry chopped vegetables, add soy sauce, serve over steamed rice.",
+    "notes": "Quick, budget-friendly, high in veggies."
+  },
+  {
+    "id": 2,
+    "title": "Chickpea Salad Bowl",
+    "budget": "low",
+    "diets": [
+      "vegan",
+      "vegetarian",
+      "balanced"
+    ],
+    "ingredients": [
+      "chickpeas",
+      "tomato",
+      "cucumber",
+      "olive oil",
+      "lemon",
+      "salt",
+      "pepper"
+    ],
+    "time_minutes": 10,
+    "servings": 2,
+    "instructions": "Mix all ingredients, season to taste.",
+    "notes": "No-cook, protein-packed vegetarian option."
+  },
+  {
+    "id": 3,
+    "title": "Grilled Chicken & Veggies",
+    "budget": "medium",
+    "diets": [
+      "balanced",
+      "keto"
+    ],
+    "ingredients": [
+      "chicken breast",
+      "bell pepper",
+      "zucchini",
+      "olive oil",
+      "salt",
+      "pepper"
+    ],
+    "time_minutes": 30,
+    "servings": 2,
+    "instructions": "Marinate chicken, grill with veggies.",
+    "notes": "Good for meal prep and protein-rich."
+  },
+  {
+    "id": 4,
+    "title": "Egg & Avocado Toast",
+    "budget": "low",
+    "diets": [
+      "vegetarian",
+      "balanced"
+    ],
+    "ingredients": [
+      "bread",
+      "egg",
+      "avocado",
+      "salt",
+      "pepper",
+      "lemon"
+    ],
+    "time_minutes": 10,
+    "servings": 1,
+    "instructions": "Toast bread, top with mashed avocado and a fried egg.",
+    "notes": "Simple breakfast or snack."
+  },
+  {
+    "id": 5,
+    "title": "Keto Salmon Salad",
+    "budget": "high",
+    "diets": [
+      "keto",
+      "balanced"
+    ],
+    "ingredients": [
+      "salmon",
+      "mixed greens",
+      "olive oil",
+      "lemon",
+      "avocado"
+    ],
+    "time_minutes": 20,
+    "servings": 2,
+    "instructions": "Pan-sear salmon and serve over greens with dressing.",
+    "notes": "Higher cost but low-carb and nutrient dense."
+  },
+  {
+    "id": 6,
+    "title": "Pasta with Tomato Basil",
+    "budget": "medium",
+    "diets": [
+      "vegetarian",
+      "balanced"
+    ],
+    "ingredients": [
+      "pasta",
+      "tomato",
+      "basil",
+      "garlic",
+      "olive oil",
+      "parmesan"
+    ],
+    "time_minutes": 25,
+    "servings": 2,
+    "instructions": "Cook pasta, toss with tomato basil sauce.",
+    "notes": "Comfort food that's easy to scale."
+  }
+]
